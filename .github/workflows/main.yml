@@ -1,0 +1,25 @@
+name: Run Command on Ubuntu Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: SSH to Ubuntu Server and Run Command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          port: ${{ secrets.SERVER_PORT }} # or use default port 22
+          script: |
+            # Commands to run on the server
+            echo "Executing commands on the server..."
+            # Add your command here
+            # For example:
+            ls
