@@ -19,7 +19,4 @@ jobs:
           port: ${{ secrets.SERVER_PORT }} # or use default port 22
           script: |
             # Commands to run on the server
-            echo "Executing commands on the server..."
-            # Add your command here
-            # For example:
-            ls
+            ./deploy.sh
