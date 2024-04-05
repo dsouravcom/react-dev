@@ -22,7 +22,7 @@ function App() {
           count is {count}
         </button>
         <p>{import.meta.env.VITE_APP_NAME}</p>
-        <p>This is the testing the pipeline final</p>
+        <p>This is the testing the pipeline 4th time</p>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
